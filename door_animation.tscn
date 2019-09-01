@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://door_animation.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/big door/big_door_4.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/big door/big_door_0.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/big door/big_door_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/big door/big_door_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/big door/big_door_3.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "closed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "opening",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "closing",
+"speed": 5.0
+} ]
+
+[node name="Door" type="Area2D"]
+script = ExtResource( 1 )
+canOpen = true
+
+[node name="DoorAnimation" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "closed"
+
+[node name="DoorArea" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -16, 16, 0, 8, 16, 16, -16, 16, -16, 16, -16, 16 )
+
+[node name="DoorBody" type="StaticBody2D" parent="."]
+
+[node name="DoorCollision" type="CollisionPolygon2D" parent="DoorBody"]
+polygon = PoolVector2Array( 16, 16, 0, 8, -16, 16, -24, 16, -24, -16, 24, -16, 24, 16, 16, 16 )
+
+[node name="ClosedDoorCollision" type="CollisionPolygon2D" parent="DoorBody"]
+polygon = PoolVector2Array( -16, 16, 0, 8, 16, 16, -16, 16 )
+disabled = true
+
+[node name="DoorInteractArea" type="Area2D" parent="."]
+
+[node name="InteractArea" type="CollisionPolygon2D" parent="DoorInteractArea"]
+polygon = PoolVector2Array( -24, 16, -24, 24, 24, 24, 24, 16, -24, 16 )
+[connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Door_body_exited"]
+[connection signal="body_entered" from="DoorInteractArea" to="." method="_on_DoorInteractArea_body_entered"]
+[connection signal="body_exited" from="DoorInteractArea" to="." method="_on_DoorInteractArea_body_exited"]

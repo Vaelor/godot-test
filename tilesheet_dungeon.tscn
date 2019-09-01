@@ -1,0 +1,812 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dungeon_sheet.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 16 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 24, 16 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Wallroof Topleft" type="Sprite" parent="."]
+position = Vector2( 72, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="Wallroof Top" type="Sprite" parent="."]
+position = Vector2( 88, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="Wallroof Topright" type="Sprite" parent="."]
+position = Vector2( 104, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="Wallroof Left" type="Sprite" parent="."]
+position = Vector2( 72, 288 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="Wallroof" type="Sprite" parent="."]
+position = Vector2( 88, 288 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="Wallroof Right" type="Sprite" parent="."]
+position = Vector2( 104, 288 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 16 )
+
+[node name="Wallroof Bottomleft" type="Sprite" parent="."]
+position = Vector2( 72, 304 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 16, 16 )
+
+[node name="Wallroof Bottom" type="Sprite" parent="."]
+position = Vector2( 88, 304 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 32, 16, 16 )
+
+[node name="Wallroof Bottomright" type="Sprite" parent="."]
+position = Vector2( 104, 304 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 16, 16 )
+
+[node name="Wallroof inner corner bottom right" type="Sprite" parent="."]
+position = Vector2( 56, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 48, 16, 16 )
+
+[node name="Wallroof inner corner bottom left" type="Sprite" parent="."]
+position = Vector2( 72, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 48, 16, 16 )
+
+[node name="Wallroof inner corner top right" type="Sprite" parent="."]
+position = Vector2( 56, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 16, 16 )
+
+[node name="Wallroof inner corner top left" type="Sprite" parent="."]
+position = Vector2( 72, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 64, 16, 16 )
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 152, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 32, 16, 16 )
+
+[node name="Wall button 1" type="Sprite" parent="."]
+position = Vector2( 464, 184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 112, 16, 16 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Wall button 1"]
+position = Vector2( 3.05176e-005, 1.52588e-005 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall button 1/StaticBody2D3"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wall buton 2" type="Sprite" parent="."]
+position = Vector2( 480, 184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 112, 16, 16 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Wall buton 2"]
+position = Vector2( -3.05176e-005, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall buton 2/StaticBody2D4"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wall button 3" type="Sprite" parent="."]
+position = Vector2( 448, 184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 112, 16, 16 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Wall button 3"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall button 3/StaticBody2D5"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wall button 4" type="Sprite" parent="."]
+position = Vector2( 496, 184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 112, 16, 16 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Wall button 4"]
+position = Vector2( -3.05176e-005, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall button 4/StaticBody2D6"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Pillar bottom" type="Sprite" parent="."]
+position = Vector2( 288, 152 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 64, 16, 16 )
+
+[node name="Pillar top" type="Sprite" parent="."]
+position = Vector2( 288, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 48, 16, 16 )
+
+[node name="Gate open" type="Sprite" parent="."]
+position = Vector2( 344, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 96, 16, 16 )
+
+[node name="Gate almost open" type="Sprite" parent="."]
+position = Vector2( 328, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 96, 16, 16 )
+
+[node name="Gate middle" type="Sprite" parent="."]
+position = Vector2( 312, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 16, 16 )
+
+[node name="Gate almost closed" type="Sprite" parent="."]
+position = Vector2( 296, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 96, 16, 16 )
+
+[node name="Gate closed" type="Sprite" parent="."]
+position = Vector2( 280, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 96, 16, 16 )
+
+[node name="Wall front 1" type="Sprite" parent="."]
+position = Vector2( 432, 184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 64, 16, 16 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Wall front 1"]
+position = Vector2( 3.05176e-005, 1.52588e-005 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall front 1/StaticBody2D2"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wall front 2" type="Sprite" parent="."]
+position = Vector2( 416, 184 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall front 2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall front 2/StaticBody2D"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wallroof Outer top" type="Sprite" parent="."]
+position = Vector2( 552, 208 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 16, 16 )
+
+[node name="Wallroof Ornament Outer top left" type="Sprite" parent="."]
+position = Vector2( 200, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 0, 16, 16 )
+
+[node name="Wallroof Ornament Outer top right" type="Sprite" parent="."]
+position = Vector2( 672, 208 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 0, 16, 16 )
+
+[node name="Wall corner top left with floor" type="Sprite" parent="."]
+position = Vector2( 400, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 16, 16, 16 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Wall corner top left with floor"]
+position = Vector2( 3.05176e-005, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall corner top left with floor/StaticBody2D2"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wall left with floor" type="Sprite" parent="."]
+position = Vector2( 536, 256 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 32, 16, 16 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Wall left with floor"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall left with floor/StaticBody2D3"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wall corner bottom left with floor" type="Sprite" parent="."]
+position = Vector2( 608, 168 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 48, 16, 16 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Wall corner bottom left with floor"]
+position = Vector2( 0, -1.52588e-005 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall corner bottom left with floor/StaticBody2D4"]
+position = Vector2( 0, -1.52588e-005 )
+shape = SubResource( 1 )
+
+[node name="Wall bottom" type="Sprite" parent="."]
+position = Vector2( 536, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 48, 16, 16 )
+
+[node name="Wallroof Ornament Outer top5" type="Sprite" parent="."]
+position = Vector2( 624, 168 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 48, 16, 16 )
+
+[node name="Wallroof Ornament Outer top6" type="Sprite" parent="."]
+position = Vector2( 504, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 32, 16, 16 )
+
+[node name="Wallroof Ornament Outer top7" type="Sprite" parent="."]
+position = Vector2( 600, 200 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 16, 16, 16 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 504, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 16, 16 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 160, 160 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 0, 16, 16 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 504, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 16, 16, 16 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 400, 280 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 16, 16, 16 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 504, 304 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 32, 16, 16 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 616, 216 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 32, 16, 16 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 416, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 48, 16, 16 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 464, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 48, 16, 16 )
+
+[node name="Button red big" type="Sprite" parent="."]
+position = Vector2( 288, 296 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 176, 96, 16, 16 )
+
+[node name="Button red big lit" type="Sprite" parent="."]
+position = Vector2( 320, 296 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 96, 16, 16 )
+
+[node name="Switch right" type="Sprite" parent="."]
+position = Vector2( 272, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 80, 16, 16 )
+
+[node name="Switch right 1" type="Sprite" parent="."]
+position = Vector2( 256, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 80, 16, 16 )
+
+[node name="Switch right 2" type="Sprite" parent="."]
+position = Vector2( 240, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 80, 16, 16 )
+
+[node name="Switch middle" type="Sprite" parent="."]
+position = Vector2( 224, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 80, 16, 16 )
+
+[node name="Switch left 2" type="Sprite" parent="."]
+position = Vector2( 208, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 80, 16, 16 )
+
+[node name="Switch left 1" type="Sprite" parent="."]
+position = Vector2( 192, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 80, 16, 16 )
+
+[node name="Switch left" type="Sprite" parent="."]
+position = Vector2( 176, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 80, 16, 16 )
+
+[node name="Button floor 1" type="Sprite" parent="."]
+position = Vector2( 96, 144 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 96, 16, 16 )
+
+[node name="Button floor 2" type="Sprite" parent="."]
+position = Vector2( 112, 144 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 96, 16, 16 )
+
+[node name="Button floor 3" type="Sprite" parent="."]
+position = Vector2( 128, 144 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 96, 16, 16 )
+
+[node name="Cube off" type="Sprite" parent="."]
+position = Vector2( 80, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 96, 16, 16 )
+
+[node name="Cube dim" type="Sprite" parent="."]
+position = Vector2( 96, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 96, 16, 16 )
+
+[node name="Cube lit" type="Sprite" parent="."]
+position = Vector2( 112, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 96, 16, 16 )
+
+[node name="Button red floor inactive" type="Sprite" parent="."]
+position = Vector2( 112, 96 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 176, 96, 16, 16 )
+
+[node name="Button red floor active" type="Sprite" parent="."]
+position = Vector2( 128, 96 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 96, 16, 16 )
+
+[node name="Button green floor inactive" type="Sprite" parent="."]
+position = Vector2( 112, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 96, 16, 16 )
+
+[node name="Button green floor active" type="Sprite" parent="."]
+position = Vector2( 128, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 96, 16, 16 )
+
+[node name="Debris" type="Sprite" parent="."]
+position = Vector2( 112, 56 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 112, 16, 16 )
+
+[node name="Debris2" type="Sprite" parent="."]
+position = Vector2( 96, 56 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 112, 16, 16 )
+
+[node name="Debris3" type="Sprite" parent="."]
+position = Vector2( 96, 72 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 112, 16, 16 )
+
+[node name="Debris4" type="Sprite" parent="."]
+position = Vector2( 112, 72 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 112, 16, 16 )
+
+[node name="Crate" type="Sprite" parent="."]
+position = Vector2( 480, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 112, 16, 16 )
+
+[node name="Chest Closed" type="Sprite" parent="."]
+position = Vector2( 448, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 112, 16, 16 )
+
+[node name="Chest Closed 1" type="Sprite" parent="."]
+position = Vector2( 432, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 112, 16, 16 )
+
+[node name="Chest Closed 2" type="Sprite" parent="."]
+position = Vector2( 416, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 112, 16, 16 )
+
+[node name="Chest Open 2" type="Sprite" parent="."]
+position = Vector2( 400, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 176, 112, 16, 16 )
+
+[node name="Chest Open 1" type="Sprite" parent="."]
+position = Vector2( 384, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 112, 16, 16 )
+
+[node name="Chest Open" type="Sprite" parent="."]
+position = Vector2( 368, 136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 112, 16, 16 )
+
+[node name="Wall4" type="Sprite" parent="."]
+position = Vector2( 536, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 64, 16, 16 )
+
+[node name="Wall3" type="Sprite" parent="."]
+position = Vector2( 400, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 64, 16, 16 )
+
+[node name="Wall2" type="Sprite" parent="."]
+position = Vector2( 504, 256 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 64, 16, 16 )
+
+[node name="Wall column2" type="Sprite" parent="."]
+position = Vector2( 504, 288 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 48, 16, 16 )
+
+[node name="Wall corner6" type="Sprite" parent="."]
+position = Vector2( 232, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 32, 16, 16 )
+
+[node name="Wall corner5" type="Sprite" parent="."]
+position = Vector2( 664, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 16, 16, 16 )
+
+[node name="Wall corner4" type="Sprite" parent="."]
+position = Vector2( 400, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 16 )
+
+[node name="Wall corner3" type="Sprite" parent="."]
+position = Vector2( 416, 296 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 16, 16 )
+
+[node name="Wall corner2" type="Sprite" parent="."]
+position = Vector2( 536, 304 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 16, 16, 16 )
+
+[node name="Wall corner" type="Sprite" parent="."]
+position = Vector2( 688, 248 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 32, 16, 16 )
+
+[node name="Wall column" type="Sprite" parent="."]
+position = Vector2( 536, 288 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 48, 16, 16 )
+
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 616, 200 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 16, 16 )
+
+[node name="Wall top column" type="Sprite" parent="."]
+position = Vector2( 520, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 80, 16, 16 )
+
+[node name="Wall column bottom2" type="Sprite" parent="."]
+position = Vector2( 432, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 80, 16, 16 )
+
+[node name="Wall column top2" type="Sprite" parent="."]
+position = Vector2( 216, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 64, 16, 16 )
+
+[node name="Wall column top" type="Sprite" parent="."]
+position = Vector2( 520, 304 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 64, 16, 16 )
+
+[node name="Wall column bottom" type="Sprite" parent="."]
+position = Vector2( 448, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 80, 16, 16 )
+
+[node name="Tower off" type="Sprite" parent="."]
+position = Vector2( 112, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 160, 48, 32, 48 )
+
+[node name="Tower dim2" type="Sprite" parent="."]
+position = Vector2( 176, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 48, 32, 48 )
+
+[node name="Robot off" type="Sprite" parent="."]
+position = Vector2( 480, 105.432 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 0, 32, 48 )
+
+[node name="Robot dim" type="Sprite" parent="."]
+position = Vector2( 448, 105.432 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 32, 48 )
+
+[node name="Robot lit" type="Sprite" parent="."]
+position = Vector2( 384, 105.432 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 0, 32, 48 )
+
+[node name="Robot red dim" type="Sprite" parent="."]
+position = Vector2( 416, 105.432 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 0, 32, 48 )
+
+[node name="Robot red lit" type="Sprite" parent="."]
+position = Vector2( 576, 105.432 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 0, 32, 48 )
+
+[node name="Robot green dim" type="Sprite" parent="."]
+position = Vector2( 544, 105.432 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 0, 32, 48 )
+
+[node name="Robot green lit" type="Sprite" parent="."]
+position = Vector2( 512, 105.432 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 0, 32, 48 )
+
+[node name="Tower dim" type="Sprite" parent="."]
+position = Vector2( 144, 192 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 48, 32, 48 )
+
+[node name="Tower lit" type="Sprite" parent="."]
+position = Vector2( 240, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 48, 32, 48 )
+
+[node name="Tower red dim" type="Sprite" parent="."]
+position = Vector2( 208, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 48, 32, 48 )
+
+[node name="Tower red lit" type="Sprite" parent="."]
+position = Vector2( 272, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 288, 48, 32, 48 )
+
+[node name="Tower green dim" type="Sprite" parent="."]
+position = Vector2( 304, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 320, 48, 32, 48 )
+
+[node name="Tower green lit" type="Sprite" parent="."]
+position = Vector2( 336, 192 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 352, 48, 32, 48 )
+
+[node name="Blue character front" type="Sprite" parent="."]
+position = Vector2( 336, 157.639 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 304, 112, 16, 16 )
+
+[node name="Blue character" type="Sprite" parent="."]
+position = Vector2( 352, 168 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 304, 96, 16, 16 )
+
+[node name="Door big closed" type="Sprite" parent="."]
+position = Vector2( 528, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 128, 48, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Door big closed"]
+position = Vector2( 24, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door big closed/StaticBody2D5"]
+shape = SubResource( 2 )
+
+[node name="Door big closing3" type="Sprite" parent="."]
+position = Vector2( 480, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 48, 128, 48, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Door big closing3"]
+position = Vector2( 24, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door big closing3/StaticBody2D4"]
+shape = SubResource( 2 )
+
+[node name="Door big closing2" type="Sprite" parent="."]
+position = Vector2( 432, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 96, 128, 48, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Door big closing2"]
+position = Vector2( 24, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door big closing2/StaticBody2D3"]
+shape = SubResource( 2 )
+
+[node name="Door big closing" type="Sprite" parent="."]
+position = Vector2( 384, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 144, 128, 48, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Door big closing"]
+position = Vector2( 24, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door big closing/StaticBody2D2"]
+shape = SubResource( 3 )
